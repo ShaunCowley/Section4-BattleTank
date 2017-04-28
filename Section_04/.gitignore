@@ -50,6 +50,9 @@ Binaries/*
 # Builds
 Build/*
 
+# Starter Content
+Section_04/Content/StarterContent/
+
 # Don't ignore icon files in Build
 !Build/**/*.ico
 
