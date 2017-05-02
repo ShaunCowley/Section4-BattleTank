@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Section_04.h"
-#include "TankAIController.h"
+#include "Public/TankAIController.h"
 
 ATank* ATankAIController::GetPlayerTank() const
 {
@@ -28,6 +28,20 @@ void ATankAIController::BeginPlay()
 	else
 	{
 		UE_LOG(LogTemp, Warning, TEXT("AIController targetting at: %s"), *(PlayerTank->GetName()));
+	}
+}
+
+void ATankAIController::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	if (GetPlayerTank())
+	{
+		//TODO move toward the player
+
+		//Aim towards the player
+		GetControlledTank()->AimAt(GetPlayerTank()->GetActorLocation());
+		//TODO fire if ready
 	}
 }
 
