@@ -29,8 +29,6 @@ void ATankAIController::BeginPlay()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("AIController targetting at: %s"), *(PlayerTank->GetName()));
 	}
-
-	//UE_LOG(LogTemp, Warning, TEXT("Player Controller Begin Play"));
 }
 
 
