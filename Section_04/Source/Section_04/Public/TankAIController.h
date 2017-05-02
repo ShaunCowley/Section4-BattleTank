@@ -14,9 +14,12 @@ class SECTION_04_API ATankAIController : public AAIController
 {
 	GENERATED_BODY()
 	
-public:
+private:
+	ATank* GetPlayerTank() const;
+
 	ATank* GetControlledTank() const;
 
+public:
 	virtual void BeginPlay() override;
 	
 	
