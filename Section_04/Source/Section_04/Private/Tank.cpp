@@ -2,6 +2,7 @@
 
 #include "Section_04.h"
 #include "Public/TankBarrel.h"
+#include "Public/TankAimingComponent.h"
 #include "Public/Tank.h"
 
 

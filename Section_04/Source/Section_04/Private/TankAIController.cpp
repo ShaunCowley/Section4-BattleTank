@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Section_04.h"
+#include "Public/Tank.h"
 #include "Public/TankAIController.h"
 
 ATank* ATankAIController::GetPlayerTank() const
