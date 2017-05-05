@@ -3,16 +3,16 @@
 #include "Section_04.h"
 #include "Public/TankTurret.h"
 
-void UTankTurret::Azimuth(float RelativeSpeed)
+void UTankTurret::Rotate(float RelativeSpeed)
 {
 	/*auto Time = GetWorld()->GetTimeSeconds();
 	UE_LOG(LogTemp, Warning, TEXT("%f -> Calling UTankTurret->Azimuth"), Time);*/
 
 	RelativeSpeed = FMath::Clamp<float>(RelativeSpeed, -1, 1);
-	auto AzimuthChange = RelativeSpeed * MaxDegreesPerSecond * GetWorld()->DeltaTimeSeconds;
-	auto NewAzimuth = RelativeRotation.Yaw + AzimuthChange;
+	auto RotationChange = RelativeSpeed * MaxDegreesPerSecond * GetWorld()->DeltaTimeSeconds;
+	auto NewRotation = RelativeRotation.Yaw + RotationChange;
 
-	SetRelativeRotation(FRotator(0, NewAzimuth, 0));
+	SetRelativeRotation(FRotator(0, NewRotation, 0));
 }
 
 

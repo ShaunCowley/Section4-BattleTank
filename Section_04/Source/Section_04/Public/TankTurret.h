@@ -14,7 +14,8 @@ class SECTION_04_API UTankTurret : public UStaticMeshComponent
 	GENERATED_BODY()
 	
 public:
-	void Azimuth(float RelativeSpeed);
+	// -1 is minimum, and 1 is maximum for rotating left-right
+	void Rotate(float RelativeSpeed);
 
 private:
 	UPROPERTY(EditAnywhere, Category = "Setup")
