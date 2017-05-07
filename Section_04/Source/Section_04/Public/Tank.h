@@ -32,6 +32,10 @@ private:
 
 	UTankBarrel* Barrel = nullptr;
 
+	float ReloadTimeInSeconds = 3.0f;
+	
+	double LastFireTime = 0;
+
 protected:
 	UTankAimingComponent* TankAimingComponent = nullptr;
 

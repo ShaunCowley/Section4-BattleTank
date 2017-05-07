@@ -13,14 +13,9 @@ class ATank;
 UCLASS()
 class SECTION_04_API ATankAIController : public AAIController
 {
-	GENERATED_BODY()
-	
+	GENERATED_BODY()	
+
 private:
-	ATank* GetPlayerTank() const;
-
-	ATank* GetControlledTank() const;
-
-public:
 	virtual void BeginPlay() override;
 	
 	virtual void Tick(float DeltaSeconds) override;
