@@ -8,7 +8,7 @@
 /**
  * TankTrack is used to set maximum drivng force, and to apply forces to the tank
  */
-UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent), hidecategories = ("Collision"))
+UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class SECTION_04_API UTankTrack : public UStaticMeshComponent
 {
 	GENERATED_BODY()
