@@ -5,9 +5,10 @@
 #include "GameFramework/Pawn.h"
 #include "Tank.generated.h"
 
+class AProjectile;
 class UTankBarrel;
 class UTankAimingComponent;
-class AProjectile;
+class UTankMovementComponent;
 
 UCLASS()
 class SECTION_04_API ATank : public APawn
@@ -40,6 +41,9 @@ private:
 
 protected:
 	UTankAimingComponent* TankAimingComponent = nullptr;
+
+	UPROPERTY(BlueprintReadOnly)
+	UTankMovementComponent* TankMovementComponent = nullptr;
 
 public:
 	void AimAt(FVector HitLocation);

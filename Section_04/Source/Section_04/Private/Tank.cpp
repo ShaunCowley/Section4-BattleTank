@@ -3,6 +3,7 @@
 #include "Section_04.h"
 #include "Public/TankBarrel.h"
 #include "Public/TankAimingComponent.h"
+#include "Public/TankMovementComponent.h"
 #include "Public/Tank.h"
 #include "Public/Projectile.h"
 
