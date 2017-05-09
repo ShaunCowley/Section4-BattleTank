@@ -23,8 +23,6 @@ void UTankMovementComponent::IntendMoveForward(float Throw)
 
 void UTankMovementComponent::IntendTurnRight(float Throw)
 {
-	//UE_LOG(LogTemp, Warning, TEXT("Intend Turn Right At: %f"), Throw);
-
 	if (!LeftTrack || !RightTrack) { return; }
 
 	LeftTrack->SetThrottle(Throw);
@@ -33,3 +31,10 @@ void UTankMovementComponent::IntendTurnRight(float Throw)
 	//TODO prevent adding of values from both input types
 }
 
+void UTankMovementComponent::RequestDirectMove(const FVector& MoveVelocity, bool bForceMaxSpeed)
+{
+	//No need to call super as we're replacing functionality not extending
+	auto TankName = GetOwner()->GetName();
+	auto MoveVelocityString = MoveVelocity.ToString();
+	UE_LOG(LogTemp, Warning, TEXT("%s vectoring towards: %s"), *TankName, *MoveVelocityString);
+}

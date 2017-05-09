@@ -16,14 +16,17 @@ class SECTION_04_API UTankMovementComponent : public UNavMovementComponent
 	GENERATED_BODY()
 
 public:
+	UFUNCTION(BlueprintCallable, Category = "Setup")
+	void Initialise(UTankTrack* LeftTrackToSet, UTankTrack* RightTrackToSet);
+
 	UFUNCTION(BlueprintCallable, Category = "Input")
 	void IntendMoveForward(float Throw);
 
 	UFUNCTION(BlueprintCallable, Category = "Input")
 	void IntendTurnRight(float Throw);
 
-	UFUNCTION(BlueprintCallable, Category = "Setup")
-	void Initialise(UTankTrack* LeftTrackToSet, UTankTrack* RightTrackToSet);
+	//TODO check best protection
+	virtual void RequestDirectMove(const FVector& MoveVelocity, bool bForceMaxSpeed) override;
 	
 private:
 	UTankTrack* LeftTrack = nullptr;
