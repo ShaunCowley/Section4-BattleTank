@@ -7,7 +7,6 @@
 
 class AProjectile;
 class UTankBarrel;
-class UTankAimingComponent;
 
 UCLASS()
 class SECTION_04_API ATank : public APawn
@@ -35,13 +34,7 @@ private:
 	
 	double LastFireTime = 0;
 
-protected:
-	UPROPERTY(BlueprintReadOnly)
-	UTankAimingComponent* TankAimingComponent = nullptr;
-
 public:
-	void AimAt(FVector HitLocation);
-
 	UFUNCTION(BlueprintCallable, Category = "Firing")
 	void Fire();
 	
