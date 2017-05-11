@@ -8,7 +8,6 @@
 class AProjectile;
 class UTankBarrel;
 class UTankAimingComponent;
-class UTankMovementComponent;
 
 UCLASS()
 class SECTION_04_API ATank : public APawn
@@ -38,9 +37,6 @@ private:
 protected:
 	UPROPERTY(BlueprintReadOnly)
 	UTankAimingComponent* TankAimingComponent = nullptr;
-
-	UPROPERTY(BlueprintReadOnly)
-	UTankMovementComponent* TankMovementComponent = nullptr;
 
 public:
 	void AimAt(FVector HitLocation);
