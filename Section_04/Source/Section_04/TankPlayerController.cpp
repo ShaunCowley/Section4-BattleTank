@@ -74,10 +74,6 @@ void ATankPlayerController::BeginPlay()
 	{
 		FoundAimingComponent(AimingComponent);
 	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Tank aiming component not found at Player Controller Begin Play"));
-	}
 }
 
 void ATankPlayerController::Tick(float DeltaTime)
