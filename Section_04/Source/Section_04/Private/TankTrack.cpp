@@ -8,6 +8,18 @@ UTankTrack::UTankTrack()
 	PrimaryComponentTick.bCanEverTick = true;
 }
 
+void UTankTrack::BeginPlay()
+{
+	Super::BeginPlay();
+
+	OnComponentHit.AddDynamic(this, &UTankTrack::OnHit);
+}
+
+void UTankTrack::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
+{
+	UE_LOG(LogTemp, Warning, TEXT("KAWABUNGA BIATCH"));
+}
+
 void UTankTrack::TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction)
 {
 	// Calculate the splippage speed
