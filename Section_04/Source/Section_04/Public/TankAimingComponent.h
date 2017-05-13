@@ -38,12 +38,13 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = "Firing")
 	float ReloadTimeInSeconds = 3.0f;
 
+	UPROPERTY(EditDefaultsOnly, CateGory = "Firing")
+	int32 RoundsLeft = 3;
+
 	UPROPERTY(EditDefaultsOnly, Category = "Setup")
 	TSubclassOf<AProjectile> ProjectileBlueprint;
 
 	double LastFireTime = 0;
-
-	int RoundsLeft = 3;
 
 	// Sets default values for this component's properties
 	UTankAimingComponent();
@@ -72,6 +73,6 @@ public:
 	EFiringState GetFiringState() const;
 	
 	UFUNCTION(BlueprintCallable, Category = "Firing")
-	int GetRoundsLeft() const;
+	int32 GetRoundsLeft() const;
 
 };
